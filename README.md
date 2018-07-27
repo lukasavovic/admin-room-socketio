@@ -1,4 +1,4 @@
-# Nick Cage Room - with socket io
+# Blog Admin Room - with socket io
 
 > Blog Admin Room , Project for SAE Institute
 > By Aleksandra Kocic and Luka Savovic
