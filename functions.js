@@ -9,7 +9,6 @@ const database = require('./db').then(function(db) {
 exports.getAllPosts = function(callback) {
 	blogPosts.find().toArray(callback);
 }
-
 exports.populateDb = function(callback){
 	blogPosts.insertMany([
         {
