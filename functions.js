@@ -1,21 +1,16 @@
-const mongo = require('mongodb');
-const MongoClient = mongo.MongoClient;
-const url = 'mongodb://localhost:27017';
-const dbName = 'usersdb';
-let db;
+let blogPosts = {};
 
-MongoClient.connect(url, (err, client)=> {
-	if (err) throw err;
-    db = client.db(dbName);
-})
+const mongo = require('mongodb');
+
+const database = require('./db').then(function(db) {
+	blogPosts = db.collection('blogPosts');
+});
 
 exports.getAllPosts = function(callback) {
-	const blogPosts = db.collection('blogPosts');
 	blogPosts.find().toArray(callback);
 }
 
-exports.populateDb = function(callback){ 
-    const blogPosts = db.collection('blogPosts');
+exports.populateDb = function(callback){
 	blogPosts.insertMany([
         {
             id: 1,
