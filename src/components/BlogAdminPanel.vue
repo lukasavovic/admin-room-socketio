@@ -36,11 +36,6 @@ export default {
         }
     },
     methods: {
-        transferNick(e) {
-            this.socket.emit('sendLocation', {
-                x: e.pageX, y: e.pageY
-            });
-        },
     },
     mounted() {
         this.socket.emit('sendNews');
@@ -48,7 +43,7 @@ export default {
             setTimeout(()=>{
                 this.newsLoaded = true;
             }, 1000);
-            console.log(data.articles);
+            console.log(data);
             this.news = data.articles;
         });
     },

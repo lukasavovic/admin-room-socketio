@@ -6,6 +6,7 @@ import addNew from '../components/addNew'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

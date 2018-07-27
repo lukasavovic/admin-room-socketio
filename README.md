@@ -1,8 +1,9 @@
 # Nick Cage Room - with socket io
 
-> Nick Cage room, Project for SAE Institute
+> Blog Admin Room , Project for SAE Institute
+> By Aleksandra Kocic and Luka Savovic
 
-Users connect to a room. When user click somewhere they move Nick Cage head to that place!
+Users can see all the news on the Homepage. User can also add new Blog post.
 ## Build Setup
 
 ``` bash
@@ -15,3 +16,5 @@ npm run dev
 # start socket io server at port 4133
 nodemon index.js
 
+#if you want to populate database before using, you should go to http://localhost:3001/populate
+database name should be userdb, and collection name should be blogPosts
