@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 
-const Controller = require('./functions');
+const Controller = require('./db/functions');
 
 const server = app.listen(3001, function() {
     console.log('server running on port 3001');
